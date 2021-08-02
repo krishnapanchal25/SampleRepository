@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Otp</title>
+</head>
+<body style="margin: 0; padding: 0;">
+<p> Dear recipient,</p>
+<p> Here are news based on your assets.</p>
+
+<table border="2" cellpadding="5" cellspacing="2">
+	<thead>
+		<tr>
+		<td> Source </td>	
+		<td> Headline </td>
+		<td> Datetime </td>
+		<td> Asset </td>
+		</tr>
+	</thead>
+	<tbody>
+		<#list payloads as payload>
+		<tr>
+			<td>${payload.source}</td>
+			<td>${payload.headline}</td>
+			<td>${payload.datetime}</td>
+			<td>${payload.asset}</td>
+		</tr>
+		</#list>
+	</tbody>
+</table>
+
+</body>
+
+</html>
